@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI</title>
+    <style>
+        body {
+            background-color: #FFF5E4;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #FF7396;
+            margin: 0 80px; /* Agrega margen solo en los lados izquierdo y derecho */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #transitionText {
+            transition: opacity 1s ease-in-out;
+            font-size: 50px; /* Aumenta el tamaño de fuente */
+        }
+        #cineteca {
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        #cineteca img {
+            max-width: 350px; /* Aumenta el tamaño de la imagen */
+            max-height: 200px;
+        }
+        #cineteca-text {
+            color: #FF7396;
+            margin-left: 10px;
+            text-align: left;
+            font-size: 50px; /* Aumenta el tamaño de la fuente para el texto junto a la foto */
+        }
+        h2 {
+            color: #FF7396; /* Cambia el color del título */
+            font-size: 50px; /* Aumenta el tamaño de la fuente para los títulos */
+        }
+        p {
+            font-size: 50px; /* Aumenta el tamaño de la fuente para el cuerpo del texto */
+        }
+    </style>
+</head>
+<body>
+    <h1>&lt;3</h1>
+    <p id="transitionText"> YEEEEE!!!!, Lo admito, toda esta semana he estado ansiosa por esto, me emociona mucho poder pasar tiempo contigo ❤️😿</p>
+
+    <script>
+        setTimeout(function() {
+            var transitionText = document.getElementById('transitionText');
+            transitionText.style.opacity = '0';
+            setTimeout(function() {
+                transitionText.innerHTML = 'Quizás pienses que es demasiado que haga una tipo invitación en un mensaje, pero quería hacer este detalle solo para ti <3, lo siento si es muy cursi esto 😿';
+                transitionText.style.opacity = '1';
+
+                setTimeout(function() {
+                    var cinetecaContainer = document.createElement('div');
+                    cinetecaContainer.id = 'cineteca';
+                    var cinetecaImg = document.createElement('img');
+                    cinetecaImg.src = 'cineteca.jpg'; 
+                    cinetecaImg.alt = 'Cineteca';
+                    var cinetecaText = document.createElement('div');
+                    cinetecaText.id = 'cineteca-text';
+                    cinetecaText.innerHTML = '<h2 style="font-size: 40px; color: #850E35;">¿Pero dónde será?</h2>Avenida Mexico-Coyoacan # 389, Mexico City 03330 Mexico (seria el sabado como te dije 🙀)';
+                    
+                    cinetecaContainer.appendChild(cinetecaImg);
+                    cinetecaContainer.appendChild(cinetecaText);
+                    document.body.appendChild(cinetecaContainer);
+                }, 6000); // Cambia el texto después de 10 segundos
+            }, 1000); 
+        }, 20000); 
+    </script>
+</body>
+</html>
